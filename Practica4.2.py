@@ -1,18 +1,31 @@
+# Practica #2
 string_word1 = input('ingresar la oracion:')
-
+counter = 0
 string_word = string_word1.split( )
 
 print(string_word)
 
-string_word_1 = string_word[0]
-string_word_2 = string_word[1]
-string_word_3 = string_word[2]
-string_word_4 = string_word[3]
+for word in string_word1:
+        counter += 1
+        print('la primera palabra es:', word, 'es', word[0].title())
 
-if set(string_word_1) == set(string_word_2) == set(string_word_3) == set(string_word_4):
-        print('true')
-else:
-        print('false')
+        if counter == 1: 
+                first_1_word_1= word[0].title()
+                word_1_next_word= word[0].title()
+                print('la primera letra de la palabra descrita:', word_1_next_word, ';la primera letra de la segunda palabra descrita:', word_1_next_word )
+                print(' ')
+        
+        else:
+                word_1_next_word= word[0].title()
+                print('la primera letra de la palabra descrita:', word_1_next_word, ';la primera letra de la segunda palabra descrita:', word_1_next_word )
+        
+                if word_1_next_word != first_1_word_1:
+                        print('True, si es un taerograma')
+                        quit()
+
+
+
+
 
 
 
